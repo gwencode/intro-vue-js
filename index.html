@@ -29,6 +29,19 @@
     <template id="movieCardTemplate">
       <div class='col-3'>
         <div class="card">
+          <img src="{{Poster}}" class="card-img-top" alt="{{Title}} poster">
+          <div class="card-body">
+            <h6 class="card-title">{{Title}}</h6>
+            <p class="card-text">{{Year}}</p>
+            <a href="https://www.imdb.com/title/{{imdbID}}" class="btn btn-primary" target="_blank">Go on IMDB</a>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- <template id="movieCardTemplate">
+      <div class='col-3'>
+        <div class="card">
           <img src="" class="card-img-top" alt="">
           <div class="card-body">
             <h6 class="card-title">Movie Title</h6>
@@ -37,7 +50,7 @@
           </div>
         </div>
       </div>
-    </template>
+    </template> -->
 
   </div>
   <!-- Import your own javascript -->
