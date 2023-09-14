@@ -26,7 +26,10 @@
 
     </div>
 
+    <!-- MUSTACHE ITERATION -->
+
     <template id="movieCardTemplate">
+      {{#movies}}
       <div class='col-3'>
         <div class="card">
           <img src="{{Poster}}" class="card-img-top" alt="{{Title}} poster">
@@ -37,7 +40,25 @@
           </div>
         </div>
       </div>
+      {{/movies}}
     </template>
+
+    <!-- DISCOVER MUSTACHE -->
+
+    <!-- <template id="movieCardTemplate">
+      <div class='col-3'>
+        <div class="card">
+          <img src="{{Poster}}" class="card-img-top" alt="{{Title}} poster">
+          <div class="card-body">
+            <h6 class="card-title">{{Title}}</h6>
+            <p class="card-text">{{Year}}</p>
+            <a href="https://www.imdb.com/title/{{imdbID}}" class="btn btn-primary" target="_blank">Go on IMDB</a>
+          </div>
+        </div>
+      </div>
+    </template> -->
+
+    <!-- DISCOVER TEMPLATE -->
 
     <!-- <template id="movieCardTemplate">
       <div class='col-3'>
