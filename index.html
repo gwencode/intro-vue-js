@@ -13,7 +13,8 @@
   <script type="importmap">
     {
       "imports": {
-        "mustachejs": "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js"
+        "mustachejs": "https://cdnjs.cloudflare.com/ajax/libs/mustache.js/4.2.0/mustache.min.js",
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
       }
     }
   </script>
@@ -21,6 +22,11 @@
 </head>
 <body>
   <div class="container">
+    <!-- VUE JS -->
+    <div id="vuejs" class="row">
+      {{ message }}
+    </div>
+
     <div id="results" class="row">
       <!-- Your movie list goes here -->
 

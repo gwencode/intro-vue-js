@@ -1,9 +1,22 @@
 console.log("hello from application.js")
 
 import Mustache from "mustachejs";
+import { createApp } from "vue";
 
 const template = document.querySelector("#movieCardTemplate").innerHTML
 const results = document.querySelector("#results")
+
+// // VUE
+
+createApp({
+  data() {
+    return {
+      message: "Hello from Vue.JS",
+    }
+  }
+}).mount("#vuejs") // The container where you want the Vue instance to be mounted.
+
+// // MUSTACHE ITERATION
 
 fetch("http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7")
   .then(response => response.json())
@@ -12,6 +25,8 @@ fetch("http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7")
     const output = Mustache.render(template, movieData);
     results.innerHTML = output;
   })
+
+// // DISCOVER MUSTACHE
 
 // fetch("http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7")
 //   .then(response => response.json())
@@ -23,6 +38,8 @@ fetch("http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7")
 //       results.insertAdjacentHTML("beforeend", output)
 //     })
 //   })
+
+// // DISCOVER TEMPLATE
 
 // fetch("http://www.omdbapi.com/?s=harry potter&apikey=adf1f2d7")
 //   .then(response => response.json())
